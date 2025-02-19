@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhéroes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            animation: glowing 3s infinite linear;
+        }
+
+        .card:active {
+            animation: explode 0.6s ease forwards;
+        }
+
+        @keyframes glowing {
+    0% {
+        box-shadow: 0 0 10px #0e8af0;
+    }
+    50% {
+        box-shadow: 0 0 20px #30f029, 0 0 30px #fbff05;
+    }
+    100% {
+        box-shadow: 0 0 10px #f36c2d;
+    }
+}
+
+        /* Efecto de explosión */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9); /* Más sombra */
+        }
+
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            margin: 5px 15px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center; margin-top: 20px;">Superhéroes</h1>
+    <div class="container">
+        <!-- Tarjeta 1 -->
+        <div class="card">
+            <img src="https://media.gq.com.mx/photos/5f6ce732bc946e88f6c96320/master/pass/goky%20ultra%20instinto.jpg" alt="Goku">
+            <h3>Goku</h3>
+            <p><strong>Poderes:</strong> Super fuerza, Kamehameha, teletransportación.</p>
+            <p><strong>Debilidades:</strong> Hambre extrema, falta de concentración.</p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="card">
+            <img src="https://wallpapers.com/images/hd/naruto-profile-pictures-sa1tekghfajrr928.jpg" alt="Naruto">
+            <h3>Naruto</h3>
+            <p><strong>Poderes:</strong> Rasengan, fuerza del zorro de nueve colas.</p>
+            <p><strong>Debilidades:</strong> Uso excesivo del chakra.</p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card">
+            <img src="https://i.pinimg.com/originals/34/88/98/348898fe7e68341c5acba805b9a4dd3f.jpg" alt="Bart Simpson">
+            <h3>Bart Simpson</h3>
+            <p><strong>Poderes:</strong> Ingenio, creatividad para travesuras.</p>
+            <p><strong>Debilidades:</strong> Distracción, falta de responsabilidad.</p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="card">
+            <img src="https://wallpapers.com/images/hd/thor-pictures-19vj5w60l1w34gcm.jpg" alt="Thor">
+            <h3>Thor</h3>
+            <p><strong>Poderes:</strong> Control del trueno, fuerza divina.</p>
+            <p><strong>Debilidades:</strong> Dependencia de Mjölnir.</p>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="card">
+            <img src="https://resizer.glanacion.com/resizer/v2/superman-pertenece-al-grupo-de-comics-IWOPYB3ZTZBWVEJ2AFTPW2E3BI.png?auth=980eb02e48ad71d7f1151e4cd12a2b9a4830bebc729a8ba4bddc198a9bc7335a&width=420&height=280&quality=70&smart=true" alt="Superman">
+            <h3>Superman</h3>
+            <p><strong>Poderes:</strong> Vuelo, fuerza sobrehumana, visión láser.</p>
+            <p><strong>Debilidades:</strong> Kryptonita, magia.</p>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxonbkbJNjmJpSP5pNeMIvIrdtRuozkh-n4Q&s" alt="Spider-Man">
+            <h3>Spider-Man</h3>
+            <p><strong>Poderes:</strong> Agilidad, fuerza, lanzar telarañas.</p>
+            <p><strong>Debilidades:</strong> Emociones personales.</p>
+        </div>
+
+        <!-- Tarjeta 7 -->
+        <div class="card">
+            <img src="https://www.mundodeportivo.com/alfabeta/hero/2024/06/wonder-woman-dc-liga-de-la-justicia.jpg?width=1200" alt="Wonder Woman">
+            <h3>Wonder Woman</h3>
+            <p><strong>Poderes:</strong> Fuerza sobrehumana, resistencia, Lazo de la Verdad.</p>
+            <p><strong>Debilidades:</strong> Exceso de confianza.</p>
+        </div>
+
+        <!-- Tarjeta 8 -->
+        <div class="card">
+            <img src="https://eventyrhuset.no/cdn/shop/collections/christianoe_64662_Batman_77a1e2b3-fcef-411f-9733-f5a075778a17.png?v=1693423809" alt="Batman">
+            <h3>Batman</h3>
+            <p><strong>Poderes:</strong> Inteligencia, artes marciales, tecnología avanzada.</p>
+            <p><strong>Debilidades:</strong> Humano sin poderes sobrenaturales.</p>
+        </div>
+
+        <!-- Tarjeta 9 -->
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/4f/c3/5b/4fc35b583da35023c126aec1a42758d3.jpg" alt="Hulk">
+            <h3>Hulk</h3>
+            <p><strong>Poderes:</strong> Fuerza ilimitada, regeneración.</p>
+            <p><strong>Debilidades:</strong> Control de la ira.</p>
+        </div>
+
+        <!-- Tarjeta 10 -->
+        <div class="card">
+            <img src="https://www.licensingitalia.it/wp-content/uploads/2020/10/flash.jpg" alt="Flash">
+            <h3>Flash</h3>
+            <p><strong>Poderes:</strong> Velocidad extrema, manipulación del tiempo.</p>
+            <p><strong>Debilidades:</strong> Deshidratación, desgaste físico.</p>
+        </div>
+
+        <!-- Tarjeta 11 -->
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/22/28/30/2228303da106c074ba1ea165348aad99.jpg" alt="Iron Man">
+            <h3>Iron Man</h3>
+            <p><strong>Poderes:</strong> Traje avanzado, inteligencia superior.</p>
+            <p><strong>Debilidades:</strong> Dependencia de su traje, ego.</p>
+        </div>
+
+        <!-- Tarjeta 12 -->
+        <div class="card">
+            <img src="https://xoandelugo.org/wp-content/uploads/2018/06/capitan-america.jpg" alt="Capitán América">
+            <h3>Capitán América</h3>
+            <p><strong>Poderes:</strong> Fuerza mejorada, liderazgo, escudo indestructible.</p>
+            <p><strong>Debilidades:</strong> Limitado por ser humano.</p>
+        </div>
+
+        
+    </div>
+
+    <footer>
+        &copy; 2024 - Página de superhéroes
+    </footer>
+</body>
+</html>
