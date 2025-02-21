@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Curriculum Vitae - Steve Smith</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .sidebar {
+            background-color: white;
+            width: 30%;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 70px 0px 30px 50px;
+        }
+
+        .header {
+            background-color: #5e35b1;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+        }
+
+        .sidebar img {
+            width: 170px;
+        }
+
+        .sidebar h1 {
+            font-size: 40px;
+            padding-top: 20px;
+        }
+
+        .sidebar h4 {
+            font-size: 13px;
+            padding-bottom: 10px;
+            color: #bbb;
+        }
+
+        .sidebar p {
+            padding-bottom: 10px;
+        }
+
+        .sidebar strong {
+            color: #4b2e83;
+        }
+
+        .sidebarInfo {
+            padding: 15px 0px 20px 0px;
+        }
+
+        .sidebar a {
+            color: #4b2e83;
+            text-decoration: none;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icons i {
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .content {
+            padding: 20px 0px 0px 80px;
+            width: 70%;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .headerTxt {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            width: 31.5%;
+        }
+
+        .headerTxt h5 {
+            margin: 0px 10px 0px 5px;
+        }
+
+        .headerTxt i {
+            width: 20px;
+            padding-left: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .headerTxt .txt {
+            font-size: 10px;
+        }
+
+        .header .bottomCV {
+            background-color: #4b2e83;
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding-right: 20px;
+        }
+
+        .header .bottomCV button {
+            background-color: #6c45bb;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .header .bottomCV button:hover {
+            cursor: pointer;
+        }
+
+        .content h4 {
+            font-size: 13px;
+            padding-bottom: 10px;
+            color: #bbb;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .barra {
+            width: 50px;
+            /* Ancho de la barra */
+            height: 5px;
+            /* Altura de la barra */
+            background-color: purple;
+            /* Color morado */
+            margin-bottom: 10px;
+            /* Espacio debajo de la barra */
+        }
+
+        /*Moviles menores a 600px*/
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+                box-shadow: none;
+            }
+
+            .content {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                height: auto;
+                padding: 20px;
+            }
+
+            .headerTxt {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .headerTxt h5 {
+                font-size: 14px;
+            }
+
+            .bottomCV {
+                width: 100%;
+
+                padding: 0;
+            }
+
+            .bottomCV button {
+                width: 80%;
+                text-align: center;
+            }
+
+            .icons {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .sidebar img {
+                width: 150px;
+                display: block;
+                margin: 0 auto;
+
+            }
+
+            .sidebar h1 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            .sidebar h4 {
+                text-align: center;
+            }
+
+            .sidebarInfo,
+            .sidebar p {
+                text-align: center;
+            }
+
+            .barra {
+                width: 30px;
+                height: 3px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="headerTxt">
+                <i class="fa-solid fa-phone" style="color: #f7f7f7;"></i>
+                <h5> 337-413-9538 <br> <span class="txt">MON-FRI, 08 AM - 17 PM</span></h5>
+                <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                <h5> info@vertiqateam.com <br> <span class="txt">WE REPLY IN 24 HRS</span></h5>
+            </div>
+
+            <div class="bottomCV">
+                <button>Download CV</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="sidebar">
+                <img src="https://th.bing.com/th/id/R.fe7f6c25cd4b6a391f2694e78525c069?rik=ixcLbJQzudm8TQ&riu=http%3a%2f%2fintegertel.com%2fimages%2fimg-single%2fimg-clients.jpg&ehk=B0k3KA0%2bR7Ovh6N5AI2R6il7uqrgIER5S74MgWjRLJk%3d&risl=&pid=ImgRaw&r=0"
+                    alt="Steve Smith">
+                <h1>Steve Smith</h1>
+                <h4>Key Account Manager</h4>
+                <div class="sidebarInfo">
+                    <p><strong>Born:</strong> August 25, 1983</p>
+                    <p><strong>E-mail:</strong> stevesmith@vertiqateam.com</p>
+                    <p><strong>Marital Status:</strong> Married</p>
+                </div>
+                <div class="icons">
+                    <i class="fa-brands fa-pinterest-p" style="background-color: red; color:white"></i>
+                    <i class="fa-brands fa-linkedin-in" style="background-color: rgb(20, 107, 117); color:white"></i>
+                    <i class="fa-brands fa-instagram" style="background-color: rgb(172, 12, 58); color:white"></i>
+                    <i class="fa-brands fa-facebook-f" style="background-color: rgb(13, 40, 109); color:white"></i>
+                    <i class="fa-brands fa-twitter" style="background-color: #1f59bd; color: white;"></i>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="barra"></div>
+                <h2>About me</h2>
+            </div>
+            <div class="content">
+                <div class="barra"></div>
+                <h2>Work Experience</h2>
+                <h4>PREVIOUS JOBS</h4>
+                <br>
+                <br>
+                <h3 class="job-title">JUNIOR PROJECT MANAGER</h3>
+                <br>
+                <p style="color: #4b2e83; font-size: 18px; font-weight: bold;">Vertiqal Team Studio</p>
+                <br>
+                <h4>MARCH 2015 - PRESENT</h4>
+                <br>
+                <br>
+                <p>Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Lorem ipsum
+                    dolor
+                    sit amet, consectetur adipiscing elit. Nulla maximus pellentesque velit, quis consequat nulla
+                    efficitur
+                    at maecenas sed massa tristique.</p>
+                <br>
+                <br>
+                <ul>
+                    <li>Duis non volutpat arcu, eu mollis amet</li>
+                    <li>Cras ullamcorper, diam uy rutrum dui</li>
+                    <li>Aliquam bibendum vitae libero</li>
+                </ul>
+
+                <br>
+                <br>
+                <h3 class="job-title">WEBMASTER / WEB DEVELOPER</h3>
+                <br>
+                <p style="color: #4b2e83; font-size: 18px; font-weight: bold;">Desing y web Studio</p>
+                <br>
+                <h4>APRIL 2014 - FEBRUARY 2015</h4>
+                <br>
+                <br>
+                <p>Cras ullamcorper, diam ut rutrum gravida, eros odio consectetur velit, eget egestas nisi ipsum et mi.
+                    Praesent in nune eget felis finibus dignissim a vitae erat. Sed nunc leo, porta efficitur viverra
+                    vel,
+                    vehicula ac.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
